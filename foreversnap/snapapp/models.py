@@ -20,7 +20,5 @@ class Photo(models.Model):
         """Store image locally if we have a URL"""
         if self.url and not self.photo:
             result = urllib.urlretrieve(self.url)
-            self.photo.save(
-                    os.path.basename(self.url),
-                    File(open(result[0]))
-                    )
+            self.photo.save(os.path.basename(self.url),
+                            File(open(result[0])))
