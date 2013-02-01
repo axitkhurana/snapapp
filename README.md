@@ -1,0 +1,3 @@
+# SnapApp
+
+App for snaps
