@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>Photo Albums</h1>
+    {% for album in albums %}
+        <a href="{% url index album.id %}">Album {{ album.id }}</a>
+        Created on: {{ album.create_time }}
+    {% endfor %}
+{% endblock %}

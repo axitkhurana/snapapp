@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>Album id: {{ album.id }}</h1>
+    {% for photo in album.photos.all %}
+        <img src="{{MEDIA_URL}}{{ photo.photo }}" class="img-polaroid" />
+        <p>Added on: {{ photo.date_added }}</p>
+        </br>
+    {% endfor %}
+{% endblock %}
