@@ -35,3 +35,7 @@ nosetests.xml
 .pydevproject
 
 settings.py
+
+# Text editor temp files
+*.un~
+*.sw[po]
